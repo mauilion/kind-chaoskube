@@ -14,12 +14,7 @@ In our values we have set an opt in annotation of chaos=true
 
 Let's deploy an app.
 
-kubectl run kuard --image=gcr.io/kuar-demo/kuard-amd64:blue --replicas=3 --port=8080
-
-and expose it
-
-kubectl expose deploy kuard --type=LoadBalancer
-
+kubectl apply -f kuard/
 
 Then use vegeta and jaggr to see our results:
 
